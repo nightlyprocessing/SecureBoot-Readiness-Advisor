@@ -21,13 +21,40 @@
 - Fixed a parser error in `-Explain` caused by an unescaped quoted `-CaseId` example string.
 - No evidence collection or advisor logic changes from v2.0.12.
 
-## v2.0.13
+## v2.0.12
 
 - Removed the numeric readiness score to avoid false precision.
 - Replaced score/factor output with categorical readiness rationale: positive signals, informational items, review items, and action items.
 - Updated TXT, HTML, CSV, Fleet, and console output to use technical readiness and certificate rollout categories instead of points.
 - Deduplicated relevant event log entries before reporting.
 - Improved BitLocker applicability logic so BitLocker guidance is not incorrectly marked non-applicable when protected-volume or BitLocker Secure Boot integrity signals are present.
+
+## v2.0.11
+
+- Added Executive Summary to TXT and HTML reports.
+- Added readiness score with scoring factors.
+- Added certificate display status with confidence and possible reasons when the rollout is not confirmed.
+- Added ESU verification summary separating user-declared ESU status from local licensing evidence.
+- Added device classification section without overclaiming full Windows 11 compatibility.
+- Added top relevant event details to the TXT report and clarified HTML event table language.
+- Replaced the full static remediation appendix with applicable-only remediation guidance.
+- Added a reference section listing remediation scenarios not applicable to the current device.
+- Added `-Explain` mode for a plain-English overview without collecting evidence.
+- Added `README-HANDOFF.txt` to local report bundles.
+- Added readiness and certificate/ESU fields to CSV/Fleet output.
+- Fixed duplicated BundleIncludesSensitive branch inherited from earlier build.
+
+## v2.0.10
+
+- Added `-CreateBundle` to generate a local ZIP handoff bundle.
+- Added `-BundleIncludesSensitive` to intentionally include sensitive local-only files such as transcript and raw `slmgr` output.
+- Added `-BundlePath` for custom bundle destination paths or directories.
+- Added `-CaseId` for ticket, pilot, wave, or change identifiers in bundle names and manifest metadata.
+- Added bundle manifest generation with report metadata, file list, redaction state, and a no-network-transfer statement.
+- Added SHA256 hash file generation for bundle contents.
+- Added Report Handoff sections to TXT and HTML reports.
+- Added console output for bundle ZIP, manifest, and hash paths.
+- Documented manual SFTP/SCP transfer examples in README while keeping the script itself local-only and non-uploading.
 
 ## v2.0.9
 
