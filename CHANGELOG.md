@@ -16,6 +16,15 @@
 - Added ESU text-signal and post-EOS update-signal fields to the Windows Support finding evidence.
 - No remediation behavior changed. The script remains read-only and local-only.
 
+## v2.0.14
+
+- Added friendly display labels for human-facing status badges and report fields, for example `Review Recommended` instead of `ReviewRecommended`.
+- Changed the default `-Windows10EsuStatus` value to `Auto`.
+- Added best-effort local Windows 10 ESU/post-EOS servicing evidence checks using non-sensitive hotfix history signals.
+- Added post-end-of-support KB update evidence to Windows support posture and ESU verification output.
+- Preserved `Enrolled`, `NotEnrolled`, and `Unknown` as explicit user-selected states.
+- Updated README guidance to clarify that Windows Update Settings remains the user-facing source of truth for consumer ESU enrollment.
+
 ## v2.0.13
 
 - Fixed a parser error in `-Explain` caused by an unescaped quoted `-CaseId` example string.
