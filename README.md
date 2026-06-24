@@ -138,7 +138,7 @@ Stop. Do not start Secure Boot certificate remediation. Run offline malware scan
 | `-EventLogDays` | Number of days of relevant event log warnings/errors to inspect. Default: `30`. |
 | `-OpenReport` | Opens the HTML report after completion. |
 | `-Interactive` | Opens the optional Windows Forms guided prompt. Not used in Fleet mode. |
-| `-Windows10EsuStatus` | Optional user-declared ESU state: `Unknown`, `Enrolled`, or `NotEnrolled`. |
+| `-Windows10EsuStatus` | Optional user-declared ESU state: `Auto`,`Unknown`, `Enrolled`, or `NotEnrolled`. |
 
 
 ## Script readability / markup
